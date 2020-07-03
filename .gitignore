@@ -1,0 +1,50 @@
+# maven ignore
+target/
+output/
+# *.jar
+*.war
+*.tar
+*.tar.gz
+tree.txt
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+*.log.gz
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+
+# ilog ignore
+ilogFailedLogs
+ilogMetricLogs
+logs
+stdout.log*
+generated
+generated_tests
+env.sh
+login.vbs
+logstream.conf
+
+*.pid
+*.factorypath
+
+# vscode ignore
+.vscode
+log/
