@@ -32,32 +32,17 @@ package com.leecol.leetcode.leetcode.editor.cn;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.leecol.leetcode.leetcode.editor.cn.tool.ListNode;
+
 /**
  * 面试题 02.01,移除重复节点
  */
 public class RemoveDuplicateNodeLcci {
     public static void main(String[] args) {
         Solution solution = new RemoveDuplicateNodeLcci().new Solution();
-        ListNode listNode = new RemoveDuplicateNodeLcci().new ListNode(1);
-        listNode.next = new RemoveDuplicateNodeLcci().new ListNode(2);
-        listNode.next.next = new RemoveDuplicateNodeLcci().new ListNode(3);
-        listNode.next.next.next = new RemoveDuplicateNodeLcci().new ListNode(3);
-        listNode.next.next.next.next = new RemoveDuplicateNodeLcci().new ListNode(2);
-        listNode.next.next.next.next.next = new RemoveDuplicateNodeLcci().new ListNode(1);
+        ListNode listNode = ListNode.build(1, 2, 3, 3, 2, 1);
         ListNode ret = solution.removeDuplicateNodes(listNode);
-        while (ret != null) {
-            System.out.println(ret.val);
-            ret = ret.next;
-        }
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
+        ListNode.print(ret);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

@@ -18,32 +18,17 @@ package com.leecol.leetcode.leetcode.editor.cn;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.leecol.leetcode.leetcode.editor.cn.tool.ListNode;
+
 /**
  * 83,删除排序链表中的重复元素
  */
 public class RemoveDuplicatesFromSortedList {
     public static void main(String[] args) {
         Solution solution = new RemoveDuplicatesFromSortedList().new Solution();
-        ListNode listNode = new RemoveDuplicatesFromSortedList().new ListNode(1);
-        listNode.next = new RemoveDuplicatesFromSortedList().new ListNode(1);
-        listNode.next.next = new RemoveDuplicatesFromSortedList().new ListNode(2);
-        listNode.next.next.next = new RemoveDuplicatesFromSortedList().new ListNode(3);
-        listNode.next.next.next.next = new RemoveDuplicatesFromSortedList().new ListNode(3);
-
+        ListNode listNode = ListNode.build(1, 1, 2, 3, 3);
         ListNode ret = solution.deleteDuplicates(listNode);
-        while (ret != null) {
-            System.out.println(ret.val);
-            ret = ret.next;
-        }
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
+        ListNode.print(ret);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

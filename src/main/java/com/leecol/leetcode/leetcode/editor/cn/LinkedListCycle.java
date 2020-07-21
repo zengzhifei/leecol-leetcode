@@ -41,26 +41,16 @@
 
 package com.leecol.leetcode.leetcode.editor.cn;
 
+import com.leecol.leetcode.leetcode.editor.cn.tool.ListNode;
+
 /**
  * 141,环形链表
  */
 public class LinkedListCycle {
     public static void main(String[] args) {
         Solution solution = new LinkedListCycle().new Solution();
-        ListNode listNode = new LinkedListCycle().new ListNode(1);
-        listNode.next = new LinkedListCycle().new ListNode(2);
-        listNode.next.next = listNode;
+        ListNode listNode = ListNode.buildCycle(1, 2);
         System.out.println(solution.hasCycle(listNode));
-    }
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)

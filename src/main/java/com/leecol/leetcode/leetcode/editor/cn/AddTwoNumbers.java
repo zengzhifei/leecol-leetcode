@@ -14,29 +14,18 @@
 
 package com.leecol.leetcode.leetcode.editor.cn;
 
+import com.leecol.leetcode.leetcode.editor.cn.tool.ListNode;
+
 /**
  * 2,两数相加
  */
 public class AddTwoNumbers {
     public static void main(String[] args) {
         Solution solution = new AddTwoNumbers().new Solution();
-        ListNode l1 = new AddTwoNumbers().new ListNode(1);
-        l1.next = new AddTwoNumbers().new ListNode(8);
-        ListNode l2 = new AddTwoNumbers().new ListNode(0);
+        ListNode l1 = ListNode.build(1, 8);
+        ListNode l2 = ListNode.build(0);
         ListNode listNode = solution.addTwoNumbers(l1, l2);
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
-    }
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
+        ListNode.print(listNode);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
